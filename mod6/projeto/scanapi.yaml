@@ -1,0 +1,10 @@
+endpoints: 
+  - name: api_op
+    path: http://127.0.0.1:8000
+    requests: 
+      - name: api_op
+        path: /
+        method: get
+        tests:
+          - name: status_code_is_200
+            assert: ${{ response.status_code == 200}}
